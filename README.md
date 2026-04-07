@@ -36,7 +36,7 @@ node server.js
 \`\`\`
 
 ### 3. Frontend Setup
-Open a second, completely new terminal window and run:
+Open a second, completely new terminal window and run these 3 commands one by one:
 \`\`\`bash
 cd frontend
 npm install
