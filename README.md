@@ -21,9 +21,12 @@ The system operates primarily through two user roles:
 
 ### 2. Backend Setup
 Open a terminal and run the following:
-\`\`\`bash
-cd backend
-npm install
+\'\'\'
+
+1) cd backend
+
+2) npm install
+
 \`\`\`
 1. Rename the `.env.example` file to `.env`.
 2. Open the new `.env` file and replace the `MONGO_URI` placeholder with your actual MongoDB connection string.
@@ -33,10 +36,12 @@ node server.js
 \`\`\`
 
 ### 3. Frontend Setup
-Open a second, completely new terminal window and run:
+Open a second, completely new terminal window and run these 3 commands one by one:
 \`\`\`bash
-cd frontend
-npm install
-npm start
+
+1) cd frontend
+2) npm install
+3) npm start
+   
 \`\`\`
 The app will automatically open in your browser at `http://localhost:3000`.
