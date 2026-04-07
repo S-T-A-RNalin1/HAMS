@@ -38,8 +38,10 @@ node server.js
 ### 3. Frontend Setup
 Open a second, completely new terminal window and run these 3 commands one by one:
 \`\`\`bash
-cd frontend
-npm install
-npm start
+
+1) cd frontend
+2) npm install
+3) npm start
+   
 \`\`\`
 The app will automatically open in your browser at `http://localhost:3000`.
