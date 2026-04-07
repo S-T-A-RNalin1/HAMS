@@ -1,13 +1,11 @@
-// backend/models/User.js
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
 
-const userSchema = new mongoose.Schema({
-  name: { type: String, required: true },
-  email: { type: String, required: true, unique: true },
-  password: { type: String, required: true },
-  role: { type: String, enum: ['student', 'admin'], default: 'student' },
-  studentId: { type: String },
-  allocatedRoom: { type: String } // Simplified for now
-});
-
-module.exports = mongoose.model('User', userSchema);
+module.exports = (sequelize) => {
+  return sequelize.define('User', {
+    _id: { type: DataTypes.UUID, defaultValue: DataTypes.UUIDV4, primaryKey: true },
+    name: { type: DataTypes.STRING, allowNull: false },
+    email: { type: DataTypes.STRING, allowNull: false, unique: true },
+    password: { type: DataTypes.STRING, allowNull: false },
+    role: { type: DataTypes.STRING, defaultValue: 'student' }
+  });
+};

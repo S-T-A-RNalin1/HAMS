@@ -1,12 +1,11 @@
-// backend/models/Ticket.js
-const mongoose = require('mongoose');
+const { DataTypes } = require('sequelize');
 
-const ticketSchema = new mongoose.Schema({
-  studentName: { type: String, required: true },
-  issue: { type: String, required: true },
-  description: { type: String, required: true },
-  status: { type: String, enum: ['open', 'resolved'], default: 'open' },
-  createdAt: { type: Date, default: Date.now }
-});
-
-module.exports = mongoose.model('Ticket', ticketSchema);
+module.exports = (sequelize) => {
+  return sequelize.define('Ticket', {
+    _id: { type: DataTypes.UUID, defaultValue: DataTypes.UUIDV4, primaryKey: true },
+    studentName: { type: DataTypes.STRING, allowNull: false },
+    issue: { type: DataTypes.STRING, allowNull: false },
+    description: { type: DataTypes.STRING, allowNull: false },
+    status: { type: DataTypes.STRING, defaultValue: 'open' },
+  });
+};
