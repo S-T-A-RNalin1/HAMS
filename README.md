@@ -21,9 +21,12 @@ The system operates primarily through two user roles:
 
 ### 2. Backend Setup
 Open a terminal and run the following:
-\`\`\`bash
-cd backend
-npm install
+\'\'\'
+
+1) cd backend
+
+2) npm install
+
 \`\`\`
 1. Rename the `.env.example` file to `.env`.
 2. Open the new `.env` file and replace the `MONGO_URI` placeholder with your actual MongoDB connection string.
